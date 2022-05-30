@@ -1,0 +1,18 @@
+spring.profiles.active: local
+
+client:
+  product:
+    baseUri: ${env.product.baseUri}
+    endpoints:
+      get-product-similarids:
+        path: /product/{productId}/similarids
+      get-product-productId:
+        path: /product/{productId}
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swagger-ui.html
+
+server:
+  port: ${env.server.port}
